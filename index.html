@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Happy Birthday Beautiful</title>
+    <title>Merry Chistmas Beautiful</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.png" type="image/x-icon">
   </head>
@@ -24,7 +24,7 @@
       
       <!-- Scripts -->
       <script>
-        const text = ["Merry Christmas Honey", "I have a question", "Do you love me?(add gif)", "WOOOOOOOOOOO!!!!"];
+        const text = ["Merry Christmas Honey", "I have a question", "Do you love me?", "WOOOOOOOOOOO!!!!", ""];
         let counter = 0;
         const mButton = document.getElementById("MC");
         const gif = document.getElementById("gif");
@@ -81,9 +81,24 @@
                 gif.setAttribute("src", "https://giphy.com/embed/euW6JDwrMn0BqyNC8t");
                 gif.classList.add("opacity100");
               }, 1700)
+              setTimeout(() => {
+                mButton.innerHTML = "WOOOOO!!!"
+                mButton.classList.remove("display-none");
+                mButton.classList.add("opacity100");
+              }, 2300) 
               //Y/N Buttons
               hideYesOrNo();
             break;
+            case 4:
+              mainText.remove();
+              mButton.remove();
+              //Main Button
+              gif.classList.remove("opacity100");
+              gif.classList.add("opacity0");
+              setTimeout(() => {
+                gif.setAttribute("src", "https://giphy.com/embed/8PPX8J5LDlzh1HQj0B");
+                gif.classList.add("opacity100");
+              }, 2000)
           }
         }
         
@@ -118,7 +133,7 @@
           //setTimeout(() => {mButton.remove(); }, 2000);
           setTimeout(() => {
             if (counter == 2) {
-              mButton.remove();
+              mButton.classList.add("display-none");
             }
             mButton.innerHTML = "what is it baby?"
             mButton.classList.add("opacity100");
