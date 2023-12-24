@@ -1,0 +1,157 @@
+@font-face {
+    font-family: atwriter;
+    src: url('atwriter.ttf');
+}
+@font-face {
+    font-family: hangingLetters;
+    src: url('Hanged Letters.ttf');
+}
+@font-face {
+    font-family: WYH;
+    src: url('Wash Your Hand.ttf');
+}
+
+@keyframes text-load{
+    0% {
+        opacity: 0;
+        transform: translateY(-700%);
+        color: rgb(255, 232, 21);
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0); rotate: 0deg;}
+    25% { transform: translateX(5px); rotate: 3deg;}
+    50% { transform: translateX(-5px); rotate: 0deg;}
+    75% { transform: translateX(5px); rotate: -3deg;}
+    100% { transform: translateX(0); rotate: 0deg;}
+}
+
+.horizontal-shake {
+    animation: horizontal-shaking 0.35s infinite;
+}
+
+#fadeEl {
+    transition: 1s;
+    font-family: atwriter;
+    font-weight: 100;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin: 0px !important;
+        
+}
+
+.comeDown {
+    animation-name: text-load;
+    animation-duration: 2s;
+}
+
+.text-show {
+    color: black;
+    opacity: 1;
+    transition: all 1s ease;
+}
+.text-fade {
+    color: black;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+html {
+    transition: 1s;
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color: #800020;
+    margin: 0;
+}
+.mainText {
+    transition: 1s;
+    font-family: atwriter;
+    font-weight: 100;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    opacity: 0;
+}
+
+#hanging {
+    font-family: hangingLetters;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.opacity0 {
+    opacity: 0;
+    transition: 1s;
+}
+.opacity100{
+    opacity: 100;
+    transition: 1.7s;
+}
+
+#MC {
+    font-family: WYH;
+    position: absolute;
+}
+
+
+.buttonHolder {
+    display: flex;
+    justify-content: center;
+}
+.display-none {
+    display:none;
+}
+.display-block {
+    display:block;
+}
+
+.question-btn-block {
+    transition: 2s;
+    display: block;
+    opacity: 0;
+}
+.question-btn-opacity {
+    opacity: 100;
+}
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+    /* Smooth movement */
+}
+#yesButton {
+    /* position: absolute; */
+    margin-right: 150px;
+    transition: 0.5s;
+    /* Smooth movement */
+}
+
+button {
+    margin-top: 50px;
+    
+    font-size: x-large;
+    color: #352031;
+    background-color: #eb5de7;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid #b12599 !important;
+}
+
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+  .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+  

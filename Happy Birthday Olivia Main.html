@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Birthday Beautiful</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="bigBody">
+      <h1 id="fadeEl" class="text-show comeDown">Merry Christmas <span id="hanging">Honey<span></h1>
+        <iframe id="gif" class="display-none" style="pointer-events: none; margin: auto;" src="https://giphy.com/embed/xUPGcpMkPDfVUbZg52" width="240" height="240" frameBorder="0" allowFullScreen></iframe>
+        <div class="buttonHolder">
+          <!-- Merry Christmas Button -->
+          <button id="MC" class="opacity0" onclick="change(); hideButton()">Merry Christmas Future Hubby!!</button>
+          
+          <!-- Question Buttons -->
+          <button class="display-none" id="yesButton" onclick="change()">yes</button>
+          <button class="display-none" id="noButton" onmouseover="moveButton()">no</button>
+        </div>
+      </div>
+      
+      <!-- Scripts -->
+      <script>
+        const text = ["Merry Christmas Honey", "I have a question", "Do you love me?(add gif)", "WOOOOOOOOOOO!!!!"];
+        let counter = 0;
+        const mButton = document.getElementById("MC");
+        const gif = document.getElementById("gif");
+        const nButton = document.getElementById("noButton");
+        const yButton = document.getElementById("yesButton");
+        const mainText = document.getElementById("fadeEl")
+        
+        // OnStart Text Drop Down
+        setTimeout(()=>{
+          const mButton = document.getElementById("MC");
+          mButton.classList.remove('opacity0');
+          mButton.classList.add("opacity100");
+        }, 2120);
+
+        function change() {
+          mainText.setAttribute("class", "text-fade");
+          
+          if (counter == 1) {
+            setTimeout(() => {
+              mainText.innerHTML = text[counter];
+              mainText.setAttribute("class", "text-show");
+
+              displayYesOrNo();
+              gif.classList.remove("display-none");
+              gif.classList.add("display-block");
+            }, 3200)
+          }
+          else {
+            setTimeout(() => {
+              mainText.innerHTML = text[counter];
+              mainText.setAttribute("class", "text-show");
+            }, 1700)
+          }
+    
+          counter++;
+    
+          if (counter >= text.length) {
+            counter = 0;
+          }
+
+          //Switch the texts
+          switch (counter) {
+            case 3:
+              //ChangeGid
+              
+              //MakeShake
+              setTimeout(() => {
+                mainText.classList.add("horizontal-shake");
+              }, 1700)
+              //Iframe-hide
+              gif.classList.remove("display-block");
+              gif.classList.add("opacity0");
+              setTimeout(() => {
+                gif.setAttribute("src", "https://giphy.com/embed/euW6JDwrMn0BqyNC8t");
+                gif.classList.add("opacity100");
+              }, 1700)
+              //Y/N Buttons
+              hideYesOrNo();
+            break;
+          }
+        }
+        
+        function displayYesOrNo() {
+          nButton.classList.remove('display-none');
+          nButton.classList.add("question-btn-block");
+          
+          yButton.classList.remove('display-none');
+          yButton.classList.add("question-btn-block");
+
+          setTimeout(() => {
+            nButton.classList.add("question-btn-opacity");
+            yButton.classList.add("question-btn-opacity");
+            }, 2000)
+        }
+        function hideYesOrNo() {
+          nButton.classList.remove('question-btn-opacity');
+          nButton.classList.add("opacity0");
+          
+          yButton.classList.remove('question-btn-opacity');
+          yButton.classList.add("opacity0");
+
+          setTimeout(() => {
+            nButton.classList.add("display-none");
+            yButton.classList.add("display-none");
+            }, 2000)
+        }
+
+        function hideButton() {
+          mButton.classList.remove('opacity100');
+          mButton.classList.add("opacity0");
+          //setTimeout(() => {mButton.remove(); }, 2000);
+          setTimeout(() => {
+            if (counter == 2) {
+              mButton.remove();
+            }
+            mButton.innerHTML = "what is it baby?"
+            mButton.classList.add("opacity100");
+          }, 4100);
+
+        }
+        
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
+
+    <!-- Snow -->
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+    </div>
+  </body>
+</html>
